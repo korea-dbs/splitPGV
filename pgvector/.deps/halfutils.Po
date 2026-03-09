@@ -1,0 +1,30 @@
+src/halfutils.o: src/halfutils.c \
+ /home/dbs/fdpvector/pgsql/include/server/postgres.h \
+ /home/dbs/fdpvector/pgsql/include/server/c.h \
+ /home/dbs/fdpvector/pgsql/include/server/postgres_ext.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config_ext.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config_manual.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config_os.h \
+ /home/dbs/fdpvector/pgsql/include/server/port.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/elog.h \
+ /home/dbs/fdpvector/pgsql/include/server/lib/stringinfo.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/errcodes.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/palloc.h src/halfutils.h \
+ /home/dbs/fdpvector/pgsql/include/server/common/shortest_dec.h \
+ src/halfvec.h
+/home/dbs/fdpvector/pgsql/include/server/postgres.h:
+/home/dbs/fdpvector/pgsql/include/server/c.h:
+/home/dbs/fdpvector/pgsql/include/server/postgres_ext.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config_ext.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config_manual.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config_os.h:
+/home/dbs/fdpvector/pgsql/include/server/port.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/elog.h:
+/home/dbs/fdpvector/pgsql/include/server/lib/stringinfo.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/errcodes.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/palloc.h:
+src/halfutils.h:
+/home/dbs/fdpvector/pgsql/include/server/common/shortest_dec.h:
+src/halfvec.h:

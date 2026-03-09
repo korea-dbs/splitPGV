@@ -1,0 +1,34 @@
+src/bitvec.o: src/bitvec.c \
+ /home/dbs/fdpvector/pgsql/include/server/postgres.h \
+ /home/dbs/fdpvector/pgsql/include/server/c.h \
+ /home/dbs/fdpvector/pgsql/include/server/postgres_ext.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config_ext.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config_manual.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config_os.h \
+ /home/dbs/fdpvector/pgsql/include/server/port.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/elog.h \
+ /home/dbs/fdpvector/pgsql/include/server/lib/stringinfo.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/errcodes.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/palloc.h src/bitutils.h \
+ src/bitvec.h /home/dbs/fdpvector/pgsql/include/server/utils/varbit.h \
+ /home/dbs/fdpvector/pgsql/include/server/fmgr.h src/vector.h \
+ /home/dbs/fdpvector/pgsql/include/server/varatt.h
+/home/dbs/fdpvector/pgsql/include/server/postgres.h:
+/home/dbs/fdpvector/pgsql/include/server/c.h:
+/home/dbs/fdpvector/pgsql/include/server/postgres_ext.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config_ext.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config_manual.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config_os.h:
+/home/dbs/fdpvector/pgsql/include/server/port.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/elog.h:
+/home/dbs/fdpvector/pgsql/include/server/lib/stringinfo.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/errcodes.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/palloc.h:
+src/bitutils.h:
+src/bitvec.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/varbit.h:
+/home/dbs/fdpvector/pgsql/include/server/fmgr.h:
+src/vector.h:
+/home/dbs/fdpvector/pgsql/include/server/varatt.h:

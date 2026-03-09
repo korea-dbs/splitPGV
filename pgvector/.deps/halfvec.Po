@@ -1,0 +1,109 @@
+src/halfvec.o: src/halfvec.c \
+ /home/dbs/fdpvector/pgsql/include/server/postgres.h \
+ /home/dbs/fdpvector/pgsql/include/server/c.h \
+ /home/dbs/fdpvector/pgsql/include/server/postgres_ext.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config_ext.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config_manual.h \
+ /home/dbs/fdpvector/pgsql/include/server/pg_config_os.h \
+ /home/dbs/fdpvector/pgsql/include/server/port.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/elog.h \
+ /home/dbs/fdpvector/pgsql/include/server/lib/stringinfo.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/errcodes.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/palloc.h src/bitvec.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/varbit.h \
+ /home/dbs/fdpvector/pgsql/include/server/fmgr.h \
+ /home/dbs/fdpvector/pgsql/include/server/catalog/pg_type.h \
+ /home/dbs/fdpvector/pgsql/include/server/catalog/genbki.h \
+ /home/dbs/fdpvector/pgsql/include/server/catalog/objectaddress.h \
+ /home/dbs/fdpvector/pgsql/include/server/access/htup.h \
+ /home/dbs/fdpvector/pgsql/include/server/storage/itemptr.h \
+ /home/dbs/fdpvector/pgsql/include/server/storage/block.h \
+ /home/dbs/fdpvector/pgsql/include/server/storage/off.h \
+ /home/dbs/fdpvector/pgsql/include/server/storage/itemid.h \
+ /home/dbs/fdpvector/pgsql/include/server/nodes/parsenodes.h \
+ /home/dbs/fdpvector/pgsql/include/server/common/relpath.h \
+ /home/dbs/fdpvector/pgsql/include/server/catalog/catversion.h \
+ /home/dbs/fdpvector/pgsql/include/server/nodes/bitmapset.h \
+ /home/dbs/fdpvector/pgsql/include/server/nodes/nodes.h \
+ /home/dbs/fdpvector/pgsql/include/server/nodes/nodetags.h \
+ /home/dbs/fdpvector/pgsql/include/server/nodes/lockoptions.h \
+ /home/dbs/fdpvector/pgsql/include/server/nodes/primnodes.h \
+ /home/dbs/fdpvector/pgsql/include/server/access/attnum.h \
+ /home/dbs/fdpvector/pgsql/include/server/nodes/pg_list.h \
+ /home/dbs/fdpvector/pgsql/include/server/nodes/value.h \
+ /home/dbs/fdpvector/pgsql/include/server/partitioning/partdefs.h \
+ /home/dbs/fdpvector/pgsql/include/server/storage/lockdefs.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/relcache.h \
+ /home/dbs/fdpvector/pgsql/include/server/access/tupdesc.h \
+ /home/dbs/fdpvector/pgsql/include/server/catalog/pg_attribute.h \
+ /home/dbs/fdpvector/pgsql/include/server/catalog/pg_attribute_d.h \
+ /home/dbs/fdpvector/pgsql/include/server/catalog/pg_type_d.h \
+ /home/dbs/fdpvector/pgsql/include/server/common/shortest_dec.h \
+ src/halfutils.h src/halfvec.h \
+ /home/dbs/fdpvector/pgsql/include/server/libpq/pqformat.h \
+ /home/dbs/fdpvector/pgsql/include/server/mb/pg_wchar.h \
+ /home/dbs/fdpvector/pgsql/include/server/port/pg_bswap.h \
+ /home/dbs/fdpvector/pgsql/include/server/port.h src/sparsevec.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/array.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/expandeddatum.h \
+ /home/dbs/fdpvector/pgsql/include/server/varatt.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/float.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/fmgrprotos.h \
+ /home/dbs/fdpvector/pgsql/include/server/utils/lsyscache.h src/vector.h
+/home/dbs/fdpvector/pgsql/include/server/postgres.h:
+/home/dbs/fdpvector/pgsql/include/server/c.h:
+/home/dbs/fdpvector/pgsql/include/server/postgres_ext.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config_ext.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config_manual.h:
+/home/dbs/fdpvector/pgsql/include/server/pg_config_os.h:
+/home/dbs/fdpvector/pgsql/include/server/port.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/elog.h:
+/home/dbs/fdpvector/pgsql/include/server/lib/stringinfo.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/errcodes.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/palloc.h:
+src/bitvec.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/varbit.h:
+/home/dbs/fdpvector/pgsql/include/server/fmgr.h:
+/home/dbs/fdpvector/pgsql/include/server/catalog/pg_type.h:
+/home/dbs/fdpvector/pgsql/include/server/catalog/genbki.h:
+/home/dbs/fdpvector/pgsql/include/server/catalog/objectaddress.h:
+/home/dbs/fdpvector/pgsql/include/server/access/htup.h:
+/home/dbs/fdpvector/pgsql/include/server/storage/itemptr.h:
+/home/dbs/fdpvector/pgsql/include/server/storage/block.h:
+/home/dbs/fdpvector/pgsql/include/server/storage/off.h:
+/home/dbs/fdpvector/pgsql/include/server/storage/itemid.h:
+/home/dbs/fdpvector/pgsql/include/server/nodes/parsenodes.h:
+/home/dbs/fdpvector/pgsql/include/server/common/relpath.h:
+/home/dbs/fdpvector/pgsql/include/server/catalog/catversion.h:
+/home/dbs/fdpvector/pgsql/include/server/nodes/bitmapset.h:
+/home/dbs/fdpvector/pgsql/include/server/nodes/nodes.h:
+/home/dbs/fdpvector/pgsql/include/server/nodes/nodetags.h:
+/home/dbs/fdpvector/pgsql/include/server/nodes/lockoptions.h:
+/home/dbs/fdpvector/pgsql/include/server/nodes/primnodes.h:
+/home/dbs/fdpvector/pgsql/include/server/access/attnum.h:
+/home/dbs/fdpvector/pgsql/include/server/nodes/pg_list.h:
+/home/dbs/fdpvector/pgsql/include/server/nodes/value.h:
+/home/dbs/fdpvector/pgsql/include/server/partitioning/partdefs.h:
+/home/dbs/fdpvector/pgsql/include/server/storage/lockdefs.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/relcache.h:
+/home/dbs/fdpvector/pgsql/include/server/access/tupdesc.h:
+/home/dbs/fdpvector/pgsql/include/server/catalog/pg_attribute.h:
+/home/dbs/fdpvector/pgsql/include/server/catalog/pg_attribute_d.h:
+/home/dbs/fdpvector/pgsql/include/server/catalog/pg_type_d.h:
+/home/dbs/fdpvector/pgsql/include/server/common/shortest_dec.h:
+src/halfutils.h:
+src/halfvec.h:
+/home/dbs/fdpvector/pgsql/include/server/libpq/pqformat.h:
+/home/dbs/fdpvector/pgsql/include/server/mb/pg_wchar.h:
+/home/dbs/fdpvector/pgsql/include/server/port/pg_bswap.h:
+/home/dbs/fdpvector/pgsql/include/server/port.h:
+src/sparsevec.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/array.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/expandeddatum.h:
+/home/dbs/fdpvector/pgsql/include/server/varatt.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/float.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/fmgrprotos.h:
+/home/dbs/fdpvector/pgsql/include/server/utils/lsyscache.h:
+src/vector.h:
