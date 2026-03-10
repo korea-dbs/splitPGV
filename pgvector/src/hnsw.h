@@ -14,6 +14,10 @@
 #include "utils/sampling.h"
 #include "vector.h"
 
+// jhpark
+// HNSW_NBR_FORKNUM
+#include "common/relpath.h"
+
 #if PG_VERSION_NUM >= 190000
 typedef Pointer Item;
 #endif
@@ -33,6 +37,16 @@ typedef Pointer Item;
 /* Preserved page numbers */
 #define HNSW_METAPAGE_BLKNO	0
 #define HNSW_HEAD_BLKNO		1	/* first element page */
+
+// (jhpark): add
+/* Fork numbers for HNSW index files
+*
+* main_forknum: element tuples (vector original data / COLD data)
+* hnsw_nbr_forknum: neighbor tuples (neighbor data / WARM? HOT? data)
+*
+*/
+//#define HNSW_NBR_FORKNUM	HNSW_NBR_FORKNUM	/* from relpath.h */
+
 
 /* Must correspond to page numbers since page lock is used */
 #define HNSW_UPDATE_LOCK 	0

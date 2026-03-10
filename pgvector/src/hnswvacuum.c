@@ -153,7 +153,9 @@ NeedsUpdated(HnswVacuumState * vacuumstate, HnswElement element)
 	HnswNeighborTuple ntup;
 	bool		needsUpdated = false;
 
-	buf = ReadBufferExtended(index, MAIN_FORKNUM, element->neighborPage, RBM_NORMAL, bas);
+//	buf = ReadBufferExtended(index, MAIN_FORKNUM, element->neighborPage, RBM_NORMAL, bas);
+	buf = ReadBufferExtended(index, HNSW_NBR_FORKNUM, element->neighborPage, RBM_NORMAL, bas);
+
 	LockBuffer(buf, BUFFER_LOCK_SHARE);
 	page = BufferGetPage(buf);
 	ntup = (HnswNeighborTuple) PageGetItem(page, PageGetItemId(page, element->neighborOffno));
@@ -228,7 +230,9 @@ RepairGraphElement(HnswVacuumState * vacuumstate, HnswElement element, HnswEleme
 	HnswSetNeighborTuple(base, ntup, element, m);
 
 	/* Get neighbor page */
-	buf = ReadBufferExtended(index, MAIN_FORKNUM, element->neighborPage, RBM_NORMAL, bas);
+//	buf = ReadBufferExtended(index, MAIN_FORKNUM, element->neighborPage, RBM_NORMAL, bas);
+	buf = ReadBufferExtended(index, HNSW_NBR_FORKNUM, element->neighborPage, RBM_NORMAL, bas);
+
 	LockBuffer(buf, BUFFER_LOCK_EXCLUSIVE);
 	state = GenericXLogStart(index);
 	page = GenericXLogRegisterBuffer(state, buf, 0);
@@ -526,7 +530,9 @@ MarkDeleted(HnswVacuumState * vacuumstate)
 			}
 			else
 			{
-				nbuf = ReadBufferExtended(index, MAIN_FORKNUM, neighborPage, RBM_NORMAL, bas);
+				//nbuf = ReadBufferExtended(index, MAIN_FORKNUM, neighborPage, RBM_NORMAL, bas);
+				// (jhpark): add
+				nbuf = ReadBufferExtended(index, HNSW_NBR_FORKNUM, neighborPage, RBM_NORMAL, bas);
 				LockBuffer(nbuf, BUFFER_LOCK_EXCLUSIVE);
 				npage = GenericXLogRegisterBuffer(state, nbuf, 0);
 			}

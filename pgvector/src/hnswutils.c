@@ -761,7 +761,10 @@ HnswLoadNeighborTids(HnswElement element, ItemPointerData *indextids, Relation i
 	HnswNeighborTuple ntup;
 	int			start;
 
-	buf = ReadBuffer(index, element->neighborPage);
+//	buf = ReadBuffer(index, element->neighborPage);
+//	(jhpark): add
+	buf = ReadBufferExtended(index, HNSW_NBR_FORKNUM, element->neighborPage, RBM_NORMAL, NULL);
+
 	LockBuffer(buf, BUFFER_LOCK_SHARE);
 	page = BufferGetPage(buf);
 

@@ -34,7 +34,10 @@ const char *const forkNames[] = {
 	"main",						/* MAIN_FORKNUM */
 	"fsm",						/* FSM_FORKNUM */
 	"vm",						/* VISIBILITYMAP_FORKNUM */
-	"init"						/* INIT_FORKNUM */
+	"init",						/* INIT_FORKNUM */
+	// (jhpark): add
+	"hnswnbr"
+		
 };
 
 StaticAssertDecl(lengthof(forkNames) == (MAX_FORKNUM + 1),
@@ -60,7 +63,9 @@ forkname_to_number(const char *forkName)
 			(errcode(ERRCODE_INVALID_PARAMETER_VALUE),
 			 errmsg("invalid fork name"),
 			 errhint("Valid fork names are \"main\", \"fsm\", "
-					 "\"vm\", and \"init\".")));
+				 //(jhpark): add
+//					 "\"vm\", and \"init\".")));
+				"\"vm\", \"init\", and \"hnswnbr\".")));					 
 #endif
 
 	return InvalidForkNumber;
