@@ -311,7 +311,8 @@ def check_pg_stat_io(conn):
         info(f"{'object':15s} {'context':15s} {'reads':>8} {'writes':>8} {'extends':>8}")
         info("-" * 58)
         for r in rows:
-            info(f"{str(r[0]):15s} {str(r[1]):15s} {r[2]:>8} {r[3]:>8} {r[4]:>8}")
+            info(f"{str(r[0]):15s} {str(r[1]):15s} {r[2] or 0:>8} {r[3] or 0:>8} {r[4] or 0:>8}")
+        #    info(f"{str(r[0]):15s} {str(r[1]):15s} {r[2]:>8} {r[3]:>8} {r[4]:>8}")
     else:
         info("pg_stat_io 데이터 없음")
 

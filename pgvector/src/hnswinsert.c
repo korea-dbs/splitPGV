@@ -293,7 +293,6 @@ AddElementOnDisk(Relation index, HnswElement e, int m, BlockNumber insertPage, B
 
 			/* Unlock previous buffer */
 			//UnlockReleaseBuffer(buf);
-			GenericXLogFinish(estate);
 			UnlockReleaseBuffer(ebuf);
 
 			/* Prepare new buffer */
