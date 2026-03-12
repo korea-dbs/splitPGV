@@ -2,3 +2,8 @@ test/
 pgsql/
 *.o
 *.class
+.venv
+pgvector/src/*.cscope.out
+postgres/src/*.cscope.out
+pgvector/src/tags
+postgres/src/tags

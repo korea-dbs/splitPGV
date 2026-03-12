@@ -58,6 +58,10 @@
 #include "utils/rel.h"
 #include "utils/snapmgr.h"
 
+// (jhpark): add
+#include "catalog/storage.h"
+#include "catalog/storage_xlog.h"
+
 #if PG_VERSION_NUM >= 160000
 #include "varatt.h"
 #endif
@@ -1131,13 +1135,29 @@ BuildIndex(Relation heap, Relation index, IndexInfo *indexInfo,
 	SeedRandom(42);
 #endif
 
+//	fprintf(stderr, "[DBG] BuildIndex entered forkNum=%d\n", forkNum);
+
+
 	InitBuildState(buildstate, heap, index, indexInfo, forkNum);
+	// (jhpark): add
+	smgrcreate(RelationGetSmgr(index), HNSW_NBR_FORKNUM, false);
+
+//	fprintf(stderr, "[DBG] smgrcreate HNSW_NBR_FORKNUM=%d called\n", HNSW_NBR_FORKNUM);
+//	fprintf(stderr, "[DBG] rd_locator spcOid=%u dbOid=%u relNumber=%u\n",
+//        index->rd_locator.spcOid,
+//        index->rd_locator.dbOid,
+//        index->rd_locator.relNumber);
 
 	BuildGraph(buildstate);
 
 	if (RelationNeedsWAL(index) || forkNum == INIT_FORKNUM)
+		log_smgrcreate(&(index)->rd_locator, HNSW_NBR_FORKNUM);
+
+	if (RelationNeedsWAL(index) || forkNum == INIT_FORKNUM)
 	{
 		log_newpage_range(index, forkNum, 0, RelationGetNumberOfBlocksInFork(index, forkNum), true);
+		// (jhpark): debug
+		fprintf(stderr, "[DBS] fork!!! NBR!!!\n");
 		log_newpage_range(index, HNSW_NBR_FORKNUM, 0, RelationGetNumberOfBlocksInFork(index, HNSW_NBR_FORKNUM), true);
 	}
 

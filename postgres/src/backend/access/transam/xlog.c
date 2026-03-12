@@ -109,6 +109,9 @@
 #include "utils/timestamp.h"
 #include "utils/varlena.h"
 
+// (jhpark): add
+#include "storage/fdp.h"
+
 extern uint32 bootstrap_data_checksum_version;
 
 /* timeline ID to be used when bootstrapping */
@@ -3111,6 +3114,10 @@ XLogFileInit(XLogSegNo logsegno, TimeLineID logtli)
 		ereport(ERROR,
 				(errcode_for_file_access(),
 				 errmsg("could not open file \"%s\": %m", path)));
+
+	// (jhpark: add
+	fdp_set_wal_hint(fd);
+
 	return fd;
 }
 
@@ -3343,6 +3350,9 @@ XLogFileOpen(XLogSegNo segno, TimeLineID tli)
 		ereport(PANIC,
 				(errcode_for_file_access(),
 				 errmsg("could not open file \"%s\": %m", path)));
+
+	// (jhpark):add
+	fdp_set_wal_hint(fd);
 
 	return fd;
 }

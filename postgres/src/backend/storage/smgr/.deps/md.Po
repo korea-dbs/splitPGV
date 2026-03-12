@@ -76,7 +76,8 @@ md.o: md.c ../../../../src/include/postgres.h ../../../../src/include/c.h \
  ../../../../src/include/storage/md.h \
  ../../../../src/include/utils/hsearch.h \
  ../../../../src/include/utils/memutils.h \
- ../../../../src/include/nodes/memnodes.h
+ ../../../../src/include/nodes/memnodes.h \
+ ../../../../src/include/storage/fdp.h
 ../../../../src/include/postgres.h:
 ../../../../src/include/c.h:
 ../../../../src/include/postgres_ext.h:
@@ -160,3 +161,4 @@ md.o: md.c ../../../../src/include/postgres.h ../../../../src/include/c.h \
 ../../../../src/include/utils/hsearch.h:
 ../../../../src/include/utils/memutils.h:
 ../../../../src/include/nodes/memnodes.h:
+../../../../src/include/storage/fdp.h:

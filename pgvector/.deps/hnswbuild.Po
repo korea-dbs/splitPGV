@@ -154,6 +154,8 @@ src/hnswbuild.o: src/hnswbuild.c \
  /home/dbs/fdpvector/pgsql/include/server/utils/datum.h \
  /home/dbs/fdpvector/pgsql/include/server/utils/memutils.h \
  /home/dbs/fdpvector/pgsql/include/server/nodes/memnodes.h \
+ /home/dbs/fdpvector/pgsql/include/server/catalog/storage.h \
+ /home/dbs/fdpvector/pgsql/include/server/catalog/storage_xlog.h \
  /home/dbs/fdpvector/pgsql/include/server/utils/backend_progress.h \
  /home/dbs/fdpvector/pgsql/include/server/utils/backend_status.h \
  /home/dbs/fdpvector/pgsql/include/server/libpq/pqcomm.h \
@@ -315,6 +317,8 @@ src/vector.h:
 /home/dbs/fdpvector/pgsql/include/server/utils/datum.h:
 /home/dbs/fdpvector/pgsql/include/server/utils/memutils.h:
 /home/dbs/fdpvector/pgsql/include/server/nodes/memnodes.h:
+/home/dbs/fdpvector/pgsql/include/server/catalog/storage.h:
+/home/dbs/fdpvector/pgsql/include/server/catalog/storage_xlog.h:
 /home/dbs/fdpvector/pgsql/include/server/utils/backend_progress.h:
 /home/dbs/fdpvector/pgsql/include/server/utils/backend_status.h:
 /home/dbs/fdpvector/pgsql/include/server/libpq/pqcomm.h:

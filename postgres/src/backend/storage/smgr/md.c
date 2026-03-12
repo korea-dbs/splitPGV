@@ -41,6 +41,9 @@
 #include "utils/hsearch.h"
 #include "utils/memutils.h"
 
+// (jhpark): add
+#include "storage/fdp.h"
+
 /*
  * The magnetic disk storage manager keeps track of open file
  * descriptors in its own descriptor pool.  This is done to make it
@@ -239,6 +242,9 @@ mdcreate(SMgrRelation reln, ForkNumber forknum, bool isRedo)
 	mdfd = &reln->md_seg_fds[forknum][0];
 	mdfd->mdfd_vfd = fd;
 	mdfd->mdfd_segno = 0;
+
+	// (jhpark): add
+	fdp_set_fd_hint(FileGetRawDesc(fd), forknum);
 
 	if (!SmgrIsTemp(reln))
 		register_dirty_segment(reln, forknum, mdfd);
@@ -1396,6 +1402,9 @@ _mdfd_openseg(SMgrRelation reln, ForkNumber forknum, BlockNumber segno,
 	/* fill the entry */
 	v = &reln->md_seg_fds[forknum][segno];
 	v->mdfd_vfd = fd;
+	// (jhpark): add
+	fdp_set_fd_hint(FileGetRawDesc(v->mdfd_vfd), forknum);
+
 	v->mdfd_segno = segno;
 
 	Assert(_mdnblocks(reln, forknum, v) <= ((BlockNumber) RELSEG_SIZE));

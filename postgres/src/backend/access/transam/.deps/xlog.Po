@@ -168,7 +168,8 @@ xlog.o: xlog.c ../../../../src/include/postgres.h \
  ../../../../src/include/utils/pg_rusage.h \
  ../../../../src/include/utils/timeout.h \
  ../../../../src/include/utils/varlena.h \
- ../../../../src/include/utils/sortsupport.h
+ ../../../../src/include/utils/sortsupport.h \
+ ../../../../src/include/storage/fdp.h
 ../../../../src/include/postgres.h:
 ../../../../src/include/c.h:
 ../../../../src/include/postgres_ext.h:
@@ -347,3 +348,4 @@ xlog.o: xlog.c ../../../../src/include/postgres.h \
 ../../../../src/include/utils/timeout.h:
 ../../../../src/include/utils/varlena.h:
 ../../../../src/include/utils/sortsupport.h:
+../../../../src/include/storage/fdp.h:
