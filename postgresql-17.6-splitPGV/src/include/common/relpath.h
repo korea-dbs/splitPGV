@@ -51,7 +51,7 @@ typedef enum ForkNumber
 	FSM_FORKNUM,
 	VISIBILITYMAP_FORKNUM,
 	INIT_FORKNUM,
-	// (beomjoon): add
+	// (XXXX-1): add
 	HNSW_NBR_FORKNUM,
 
 	/*
@@ -61,7 +61,7 @@ typedef enum ForkNumber
 	 */
 } ForkNumber;
 
-// (beomjoon): add
+// (XXXX-1): add
 #define MAX_FORKNUM		HNSW_NBR_FORKNUM
 
 #define FORKNAMECHARS	4		/* max chars for a fork name */
