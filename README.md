@@ -44,7 +44,7 @@ $ /opt/splitPGV/bin/psql -d vdbb1 -c "CREATE TABLE items (id INTEGER PRIMARY KEY
 $ /opt/splitPGV/bin/psql -d vdbb1 -c "CREATE INDEX ON items USING hnsw (embedding vector_cosine_ops) WITH (m = 24, ef_construction = 200) TABLESPACE ts_idx;" 
 ```
 ### Evaluate
-1. Run ANN-Benchmarks.
+1. Run ANN-Benchmarks, as introduced in prerequisites.
 
 
 Comment out drop existing table and index code in '/ann-benchmarks/ann_benchmarks/algorithms/pgvector/module.py', make sure the benchmark can run on pre-built index.
