@@ -1,1 +1,0 @@
-/home/dbs/fdpvector/postgres/src/backend/catalog/pg_description_d.h

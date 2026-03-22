@@ -1,1 +1,0 @@
-/home/dbs/fdpvector/postgres/src/backend/catalog/pg_subscription_rel_d.h

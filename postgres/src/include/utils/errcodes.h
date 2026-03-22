@@ -1,1 +1,0 @@
-/home/dbs/fdpvector/postgres/src/backend/utils/errcodes.h
