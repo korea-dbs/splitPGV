@@ -2,8 +2,8 @@
 SplitPGV physically separates element tuples and neighbor tuples of Heirarchical Nevigatable Small World(HNSW) index into distinct segment files within PosgreSQL's storage manager. SplitPGV ensures that each segment file constains tuples of a single type, thereby improving query throughput(QPS) and increasing buffer cache hit ratio under memory-constrained conditions.
 ## Getting Started
 ### Prerequisites
-* Ann-Benchmarks (from ann-benchmarks Github Repository) 
-
+* Ann-Benchmarks (from [ann-benchmarks Github Repository](https://github.com/erikbern/ann-benchmarks/tree/main))
+  
 ### Build
 1. Clone the repo.
 2. Build postgres-17.6-splitPGV:
@@ -45,5 +45,7 @@ $ /opt/splitPGV/bin/psql -d vdbb1 -c "CREATE INDEX ON items USING hnsw (embeddin
 ```
 ### Evaluate
 1. Run ANN-Benchmarks.
-Comment out drop existing table and index code in /ann-benchmarks/ann_benchmarks/algorithms/pgvector/module.py, make sure the benchmark can run on pre-built index.
-In case of using dataset not provided from ann-benchmark, add dataset to /ann-benchmarks/data and its metadata to /ann-benchmarks/ann_benchmarks/datasets.py .
+
+
+Comment out drop existing table and index code in '/ann-benchmarks/ann_benchmarks/algorithms/pgvector/module.py', make sure the benchmark can run on pre-built index.
+In case of using dataset not provided from ann-benchmark, add dataset to '/ann-benchmarks/data' and its metadata to '/ann-benchmarks/ann_benchmarks/datasets.py'.
