@@ -20,7 +20,7 @@ $ make PG_CONFIG=/opt/splitPGV/bin/pg_config
 $ sudo make PG_CONFIG=/opt/pg-32k/bin/pg_config install
 ```
 ### Run
-1. Make own database, use the path below to make sure sliptPGV work proper.
+1. Make own database, use the path below to make sure splitPGV works proper.
 ```
 $ mkdir -p /mnt/fdp/data1
 $ mkdir -p /mnt/fdp/pg_rel
